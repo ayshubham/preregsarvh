@@ -464,6 +464,12 @@ img {
     grid-template-rows: repeat(2, 1fr);
     column-gap: 2rem;
   }
+  .portfolio__container1 {
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2rem;
+    width: 30%;
+  }
 
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
@@ -555,4 +561,47 @@ img {
   font-size: 0.9em;
 
   line-height: 1.32em;
+}
+
+/* slider css*/
+
+.main-carousel {
+  background: white;
+}
+
+.carousel-cell {
+  padding: 2rem;
+  background-color: white;
+
+  width: 20%;
+  height: auto;
+  margin-right: 10px;
+
+  border-radius: 50%;
+  counter-increment: carousel-cell;
+}
+.carousel-cell ::before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+}
+
+.carousel-cell {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  /* tablet size, 3 cells in group */
+  .carousel-cell {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* desktop, 4 cells in group */
+  .carousel-cell {
+    width: 18%;
+  }
 }
